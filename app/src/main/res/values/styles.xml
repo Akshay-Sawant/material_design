@@ -1,14 +1,15 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- Base application theme. -->
-    <style name="AppTheme.SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme.SplashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
@@ -42,14 +43,14 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textSize">@dimen/material_text_headline</item>
+        <item name="android:textSize">@dimen/md_typography_heading5_medium</item>
     </style>
 
     <!--Sub Heading Text-->
     <style name="AppTheme.SubHeadingText" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textSize">@dimen/material_text_title</item>
+        <item name="android:textSize">@dimen/md_typography_heading6_medium</item>
     </style>
 
     <!--Constant TextView Title-->
@@ -57,7 +58,7 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColorHint">@android:color/black</item>
-        <item name="android:textSize">@dimen/material_text_body1</item>
+        <item name="android:textSize">@dimen/md_typography_body2_regular</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
@@ -65,17 +66,18 @@
     <style name="AppTheme.TextViewTitlePrimary" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textColorHint">@android:color/black</item>
-        <item name="android:textSize">@dimen/material_text_body1</item>
+        <item name="android:textSize">@dimen/md_typography_subtitle2_medium</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
     <!--Outlined Floating Labelled TextInputLayout-->
     <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <!-- Hint color and label color in FALSE state -->
-        <item name="android:textColorHint">@android:color/darker_gray</item>
-        <item name="android:color">@color/colorPrimary</item>
-        <item name="android:textSize">@dimen/material_text_body1</item>
-        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:color">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/md_typography_subtitle2_medium</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="hintTextColor">@color/colorAccent</item>
 
         <item name="hintTextAppearance">@style/HintText</item>
         <item name="errorTextAppearance">@style/ErrorText</item>
@@ -83,20 +85,20 @@
 
     <!--Hint for TextInputLayout-->
     <style name="HintText" parent="TextAppearance.AppCompat">
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">@dimen/material_text_caption</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/md_typography_caption_regular</item>
     </style>
 
     <!--Error for TextInputLayout-->
     <style name="ErrorText" parent="TextAppearance.AppCompat">
-        <item name="android:textColor">@android:color/holo_red_dark</item>
-        <item name="android:textSize">@dimen/material_text_caption</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/md_typography_caption_regular</item>
     </style>
 
     <!--Constant Transparent Button-->
     <style name="AppTheme.Button.Transparent" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:background">?selectableItemBackground</item>
         <item name="backgroundTint">@android:color/transparent</item>
     </style>
@@ -104,14 +106,11 @@
     <!--Constant Light Action Button-->
     <style name="AppTheme.Button.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textStyle">normal</item>
-        <item name="backgroundTint">@android:color/white</item>
-        <item name="android:startColor">@android:color/white</item>
-        <item name="android:endColor">@android:color/white</item>
         <item name="android:background">?selectableItemBackground</item>
-        <item name="cornerRadius">@dimen/material_dimen_mdpi</item>
-        <item name="strokeColor">@android:color/black</item>
+        <!--        <item name="cornerRadius">@dimen/md_component_button_text_left_and_right_padding</item>-->
+        <item name="strokeColor">@color/colorAccent</item>
         <item name="strokeWidth">1dp</item>
     </style>
 
@@ -123,7 +122,7 @@
         <item name="android:startColor">@android:color/white</item>
         <item name="android:endColor">@android:color/white</item>
         <item name="android:background">?selectableItemBackground</item>
-        <item name="cornerRadius">@dimen/material_dimen_mdpi</item>
+        <item name="cornerRadius">@dimen/md_component_button_text_left_and_right_padding</item>
         <item name="strokeColor">@color/colorPrimaryDark</item>
         <item name="strokeWidth">1dp</item>
     </style>
@@ -135,7 +134,7 @@
         <item name="android:textStyle">bold</item>
         <item name="backgroundTint">@color/colorPrimaryDark</item>
         <item name="android:background">?selectableItemBackground</item>
-        <item name="cornerRadius">@dimen/material_dimen_mdpi</item>
+        <item name="cornerRadius">@dimen/md_component_button_text_left_and_right_padding</item>
         <item name="strokeColor">@android:color/white</item>
         <item name="strokeWidth">1dp</item>
     </style>
@@ -143,11 +142,10 @@
     <!--Constant Dark Action Button-->
     <style name="AppTheme.Button.Dark" parent="Widget.MaterialComponents.Button">
         <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="backgroundTint">@color/colorPrimaryDark</item>
-        <item name="android:colorBackground">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorAccent</item>
         <item name="android:background">?selectableItemBackground</item>
-        <item name="cornerRadius">@dimen/material_dimen_mdpi</item>
     </style>
 
     <style name="AppTheme.Button.Dark.Opacity" parent="Widget.MaterialComponents.Button">
@@ -156,7 +154,7 @@
         <item name="backgroundTint">@color/colorPrimary</item>
         <item name="android:colorBackground">@color/colorAccent</item>
         <item name="android:background">?selectableItemBackground</item>
-        <item name="cornerRadius">@dimen/material_dimen_mdpi</item>
+        <item name="cornerRadius">@dimen/md_component_button_text_left_and_right_padding</item>
     </style>
 
     <!--Constant Tab Layout-->
@@ -174,7 +172,7 @@
     <style name="AppTheme.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="android:background">@android:color/white</item>
         <item name="android:layout_gravity">bottom</item>
-        <item name="elevation">@dimen/material_dimen_small_ldpi</item>
+        <item name="elevation">@dimen/md_component_bottom_navigation_elevation</item>
         <item name="labelVisibilityMode">labeled</item>
         <item name="android:minHeight">?attr/actionBarSize</item>
         <!--<item name="itemIconTint">@drawable/bottom_navigation_colors</item>
@@ -184,19 +182,18 @@
     <!--Constant CardView-->
     <style name="AppTheme.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="android:background">@android:color/white</item>
-        <item name="android:padding">@dimen/material_dimen_mdpi</item>
+        <item name="android:padding">@dimen/md_component_card_padding</item>
         <!--<item name="android:layout_marginStart">@dimen/material_dimen_mdpi</item>
         <item name="android:layout_marginLeft">@dimen/material_dimen_mdpi</item>
         <item name="android:layout_marginEnd">@dimen/material_dimen_mdpi</item>
         <item name="android:layout_marginTop">@dimen/material_dimen_ldpi</item>-->
-        <item name="android:layout_marginBottom">@dimen/material_dimen_ldpi</item>
+        <item name="android:layout_marginBottom">@dimen/md_component_cards_space_between_cards
+        </item>
         <!--<item name="android:layout_marginRight">@dimen/material_dimen_mdpi</item>-->
     </style>
 
     <style name="AppTheme.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
-        <item name="android:layout_marginEnd">@dimen/material_dimen_mdpi</item>
-        <item name="android:layout_marginBottom">@dimen/material_dimen_mdpi</item>
-        <item name="android:layout_marginRight">@dimen/material_dimen_mdpi</item>
+        <item name="android:layout_margin">@dimen/md_component_floating_action_button_margin</item>
         <item name="android:src">@drawable/ic_launcher_background</item>
         <item name="backgroundTint">@color/colorPrimary</item>
         <item name="fabSize">auto</item>
@@ -206,6 +203,22 @@
         <item name="android:src">@drawable/ic_launcher_background</item>
         <item name="backgroundTint">@color/colorAccent</item>
         <item name="fabSize">mini</item>
+    </style>
+
+    <!--Shape Appearances-->
+    <style name="ShapeAppearance.MyApp.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.MediumComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.LargeComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">16dp</item>
     </style>
 
 </resources>

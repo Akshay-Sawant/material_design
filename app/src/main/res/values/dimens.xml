@@ -39,6 +39,7 @@
     </dimen>
 
     <!-- Bottom navigation -->
+    <dimen name="md_component_bottom_navigation_elevation">4dp</dimen>
     <dimen name="md_component_bottom_navigation_height">56dp</dimen>
 
     <!-- Buttons -->
@@ -64,6 +65,7 @@
     <dimen name="md_component_cards_supporting_text_bottom_padding">24dp</dimen>
     <dimen name="md_component_cards_left_and_right_padding">16dp</dimen>
     <dimen name="md_component_cards_top_and_bottom_padding">16dp</dimen>
+    <dimen name="md_component_card_padding">16dp</dimen>
     <dimen name="md_component_cards_padding_from_edge_of_screen_to_card">8dp</dimen>
     <dimen name="md_component_cards_space_between_cards">8dp</dimen>
 
